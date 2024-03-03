@@ -8,6 +8,15 @@ This project is a simple implementation of an OpenAI chatbot that uses ChromaDB 
 2. Install the required dependencies by running `pip install -r requirements.txt`.
 3. Set the `OPENAI_API_KEY` environment variable with your OpenAI API key.
 
+## Running on Windows 10
++
+1. Make sure you have Python and pip installed on your machine. If not, you can download Python [here](https://www.python.org/downloads/) and pip will be installed with it.
+2. Clone the repository by running `git clone <repository-url>`.
+3. Navigate to the project directory and install the required dependencies by running `pip install -r requirements.txt`.
+4. Set the `OPENAI_API_KEY` environment variable with your OpenAI API key. You can do this by running `setx OPENAI_API_KEY "<your-api-key>"` in the command prompt.
+5. Run the script `main.py` to start the Flask server by running `python main.py`.
+6. Open another command prompt, navigate to the `GUI` directory and run the Flutter application by running `flutter run`.
+
 ## Usage
 
 Run the script `main.py` to start the chatbot. You can interact with the bot by typing your messages into the console. To exit the chatbot, type 'exit'.
