@@ -66,6 +66,7 @@ class _ChatWidgetState extends State<ChatWidget> {
   @override
   void initState() {
     super.initState();
+    _verifyServerRoutes(); // Added to verify server routes
   }
 
   void _scrollDown() {
@@ -236,6 +237,14 @@ class _ChatWidgetState extends State<ChatWidget> {
         );
       },
     );
+  }
+
+  Future<void> _verifyServerRoutes() async {
+    final homeResponse = await http.get(Uri.parse('http://localhost:5000/'));
+    print('Home route response: ${homeResponse.body}');
+
+    final healthResponse = await http.get(Uri.parse('http://localhost:5000/health'));
+    print('Health route response: ${healthResponse.body}');
   }
 }
 

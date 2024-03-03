@@ -106,6 +106,14 @@ def openai_chat(user_message, query_results):
 # Flask app setup
 app = Flask(__name__)
 
+@app.route('/', methods=['GET'])
+def home():
+    return jsonify({'message': 'Server is running'})
+
+@app.route('/health', methods=['GET'])
+def health():
+    return jsonify({'status': 'healthy'})
+
 @app.route('/chat', methods=['POST'])
 def chat():
     data = request.get_json()
