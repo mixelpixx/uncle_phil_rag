@@ -8,6 +8,16 @@ This project is a simple implementation of an OpenAI chatbot that uses ChromaDB 
 2. Install the required dependencies by running `pip install -r requirements.txt`.
 3. Set the `OPENAI_API_KEY` environment variable with your OpenAI API key.
 
+## Running the Application on Windows 10
++
+1. Make sure you have Python 3.8 or later installed. If not, download and install it from [here](https://www.python.org/downloads/).
+2. Install pip, which is the package installer for Python. You can check if pip is installed by typing `pip --version` in the command prompt. If it is not installed, download and install it from [here](https://pip.pypa.io/en/stable/installation/).
+3. Clone the repository by typing `git clone https://github.com/your-repo-link` in the command prompt.
+4. Navigate to the project directory using `cd path-to-your-directory`.
+5. Install the required dependencies by typing `pip install -r requirements.txt` in the command prompt.
+6. Set the `OPENAI_API_KEY` environment variable with your OpenAI API key. You can do this by typing `setx OPENAI_API_KEY your-api-key` in the command prompt.
+7. Run the application by typing `python main.py` in the command prompt.
+
 ## Usage
 
 Run the script `main.py` to start the chatbot. You can interact with the bot by typing your messages into the console. To exit the chatbot, type 'exit'.
