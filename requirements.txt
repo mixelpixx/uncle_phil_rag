@@ -1,0 +1,5 @@
+openai
+llama_index
+chromadb
+IPython
+getpass
