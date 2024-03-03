@@ -1,0 +1,27 @@
+name: philips_support_app
+description: "Philips Patient Monitoring Installation & Trouble Shooting"
+
+publish_to: none
+
+environment:
+  sdk: ^3.2.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  flutter_markdown: any
+  # Note: best practice here is to use a caret version constraint. We use `any`
+  # here just for the purpose of the sample.
+  google_generative_ai: any
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+
