@@ -1,3 +1,4 @@
+from flask import Flask, request, jsonify
 import os
 import shutil
 import openai
@@ -15,7 +16,6 @@ client = OpenAI()
 # OpenAI API setup
 os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY") or getpass.getpass("OpenAI API Key:")
 openai.api_key = os.environ["OPENAI_API_KEY"]
-
 
 # ChromaDB setup 
 chroma_client = chromadb.EphemeralClient()
@@ -47,7 +47,6 @@ index = VectorStoreIndex.from_documents(
     documents, storage_context=storage_context, embed_model=embed_model
 )
 
-
 # Helper functions
 def check_database_exists():
     return os.path.exists("./chroma_db")
@@ -63,7 +62,6 @@ def query_engine(user_message):
     engine = index.as_query_engine(similarity_top_k=5)
     query_results = engine.query(user_message)
     return query_results
-
 
 # OpenAI interaction function
 def openai_chat(user_message, query_results):
@@ -105,16 +103,17 @@ def openai_chat(user_message, query_results):
         print(f"Failed to call OpenAI API: {e}")
         return "Error: I'm having trouble accessing the knowledge sources right now."
 
+# Flask app setup
+app = Flask(__name__)
 
-
+@app.route('/chat', methods=['POST'])
+def chat():
+    data = request.get_json()
+    user_message = data['message']
+    query_results = query_engine(user_message)
+    response = openai_chat(user_message, query_results)
+    return jsonify({'text': response})
 
 # Main interaction loop
 if __name__ == "__main__":
-    while True:
-        user_message = input("You: ")
-        if user_message.lower() == 'exit':
-            break
-        query_results = query_engine(user_message)
-        response = openai_chat(user_message, query_results)
-        print(f"Bot: {response}")
-
+    app.run(debug=True)
