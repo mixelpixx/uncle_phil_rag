@@ -1,5 +1,2 @@
-openai
-llama-index
-chromadb
-IPython
-getpass
+...rest of the code...
+flask-cors

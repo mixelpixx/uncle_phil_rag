@@ -18,6 +18,12 @@ This project is a simple implementation of an OpenAI chatbot that uses ChromaDB 
 6. Set the `OPENAI_API_KEY` environment variable with your OpenAI API key. You can do this by typing `setx OPENAI_API_KEY your-api-key` in the command prompt.
 7. Run the application by typing `python main.py` in the command prompt.
 
+## Running the Flutter GUI
++
+1. Make sure you have Flutter and Dart installed on your machine. If not, you can download and install them from [here](https://flutter.dev/docs/get-started/install).
+2. Navigate to the /GUI/ directory using `cd /GUI/`.
+3. Run the Flutter GUI by typing `flutter run` in the command prompt.
+
 ## Usage
 
 Run the script `main.py` to start the chatbot. You can interact with the bot by typing your messages into the console. To exit the chatbot, type 'exit'.
