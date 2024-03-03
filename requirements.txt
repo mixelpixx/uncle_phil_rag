@@ -3,6 +3,3 @@ llama-index
 chromadb
 IPython
 getpass
-Flask
-Dart
-Flutter
