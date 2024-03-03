@@ -1,5 +1,5 @@
 openai
-llama_index
+llama-index
 chromadb
 IPython
 getpass
