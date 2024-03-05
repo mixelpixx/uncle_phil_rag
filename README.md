@@ -21,7 +21,7 @@ This project is a simple implementation of an OpenAI chatbot that uses ChromaDB 
 ## Running the Flutter GUI
 
 1. Make sure you have Flutter and Dart installed on your machine. If not, you can download and install them from [here](https://flutter.dev/docs/get-started/install).
-2. Navigate to the /lib/ directory using `cd /lib/`.
+2. Navigate to the root directory of your project (where main.py is located)
 3. Run the Flutter GUI by typing `flutter run` in the command prompt.
 
 ## Usage
