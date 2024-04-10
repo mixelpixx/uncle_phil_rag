@@ -1,2 +1,7 @@
-...rest of the code...
-flask-cors
+flask
+flask_cors
+openai
+chromadb
+getpass
+llama_index.core
+llama_index
