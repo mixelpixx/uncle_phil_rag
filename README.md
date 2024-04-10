@@ -1,6 +1,9 @@
-Install ython 3.10 - 3.12
+Install Python 3.10 - 3.12
+
 Install Flutter SDK for Windows (or your secific OS)
+
 Install Openai API Key into your Os Envirnmental variables as 'OPENAI_API_KEY'
+
 
 Navigate to project root folder:
 Open command prompt
