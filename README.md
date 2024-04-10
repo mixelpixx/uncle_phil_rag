@@ -1,42 +1,22 @@
-# Project Setup Guide
+Install ython 3.10 - 3.12
+Install Flutter SDK for Windows (or your secific OS)
+Install Openai API Key into your Os Envirnmental variables as 'OPENAI_API_KEY'
 
-## Introduction
-This guide will help you set up and run the server (`main.py`) and the GUI (`main.dart`) for our application on a Windows PC.
+Navigate to project root folder:
+Open command prompt
+Type the following:
 
-## Prerequisites
-Before you begin, ensure you have the following installed:
+Pip install -r requirements.txt
 
-## Setting Up the Project
-1. Clone the repository or download the project files.
-2. Open a command prompt and navigate to the project directory.
+python main.py
 
-### Installing Dependencies
-  ```bash
-  pip install -r requirements.txt
-  ```
-  ```bash
-  flutter pub get
-  ```
+(takes a second to build db, 2 minutes maybe, on my laptop)
 
-## Running the Server
-1. Navigate to the `/root` directory.
-2. Run the server using:
-   ```bash
-   start.bat
-   ```
-   Ensure the server starts successfully and is listening for connections.
+This loads the server, allowing front end to connect and building the database from the files in the 'DOCS' folder
 
-## Running the GUI
-1. Open another command prompt and navigate to the `/GUI` directory.
-2. Start the GUI by running:
-   ```bash
-   flutter run
-   ```
 
-## Verifying Everything Works
+Open another command prompt in the project root folder and type:
 
-## Troubleshooting Common Issues
-If you encounter any issues, check the following:
+fluter run
 
-## Additional Resources
-For more information, refer to the official documentation:
+Should give you options to run in different environments, select 2 for easy testing
